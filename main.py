@@ -11,9 +11,11 @@ class DegreeConversor:
 
 
 while True:
-    options = input("Qual programa gostaria de utilizar hoje? \n (Digite o número.) 1 - Conversor de Temperaturas")
+    options = input("Qual programa gostaria de utilizar hoje? \n (Digite o número.) 1 - Conversor de Temperaturas \n (digite SAIR para sair)")
     options = options.replace(" ","")
-    if options == "1":
+    if options == "SAIR":
+        break
+    elif options == "1":
         print("Qual Conversor gostaria de utilizar?")
         which_conversor = input("1 - Celsius para Fahrenheit, 2 - Fahrenheit para Celsius, 3 - Sair")
         which_conversor = which_conversor.replace(" ","")
