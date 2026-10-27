@@ -36,5 +36,6 @@ while True:
             conversor.kelvin_to_fahrenheit()
 
     elif options == "2":
-        password_gen = password_generator.PassGen(length=input("Digite quantos caractéres você gostaria que a senha tivesse:"))
-        password_gen.generate_random_password(password_gen)
+        password_gen = password_generator.PassGen
+        pass_length = int(input("Digite quantos caractéres que gostaria que sua senha tivesse."))
+        password_gen.generate_random_password(length=pass_length)
