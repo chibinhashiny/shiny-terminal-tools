@@ -1,7 +1,8 @@
 import temperature_conversor
+import password_generator
 
 while True:
-    options = input("Qual programa gostaria de utilizar hoje? \n (Digite o número.) 1 - Conversor de Temperaturas \n (digite SAIR para sair)")
+    options = input("Qual programa gostaria de utilizar hoje? \n (Digite o número.) 1 - Conversor de Temperaturas \n 2 - Gerador de Senha \n (digite SAIR para sair)")
     options = options.replace(" ","")
     options = options.upper()
     if options == "SAIR":
@@ -33,3 +34,7 @@ while True:
         if which_conversor == "6":
             conversor = temperature_conversor.DegreeConversor()
             conversor.kelvin_to_fahrenheit()
+
+    elif options == "2":
+        password_gen = password_generator.PassGen(length=input("Digite quantos caractéres você gostaria que a senha tivesse:"))
+        password_gen.generate_random_password(password_gen)
