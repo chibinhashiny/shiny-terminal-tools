@@ -11,3 +11,10 @@ class PassGen:
         print(f"Senha gerada: {random_characters}")
 
 
+    def generate_random_password_with_numbers(length):
+        random_characters_and_numbers = string.ascii_letters + string.digits
+        random_digits_pass = random.choices(random_characters_and_numbers, k=length)
+        random_digits_pass = "".join(random_digits_pass)
+        print(f"Senha gerada: {random_digits_pass}")
+
+
